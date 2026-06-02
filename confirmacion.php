@@ -11,6 +11,7 @@
     <nav class="navbar">
         <div class="nav-left">
             <!-- Aquí va el PHP para mostrar la bandera -->
+
             <img src="img/banderas/mx.png" class="flag-icon">
             <h1>PizzaPlaneta</h1>
         </div>
@@ -31,6 +32,28 @@
             <h3>Resumen de tu Orden:</h3>
             
             <!-- Aquí va el PHP para mostrar los datos recibidos -->
+            <?php
+            $nombre = $_POST["nombre"];
+            $correo = $_POST["correo"];
+            $cantidad_pizzas = $_POST["cantidad"];
+            $tipo_pizza = $_POST["tipo_pizza"];
+            $picante = $_POST["picante"];
+            $fecha = $_POST["fecha_entrega"];
+            $color = $_POST["color_caja"];
+            $tamanio = $_POST["tamano"];
+            $extras = $_POST["extras"];
+            $instrucciones = $_POST["instrucciones"];
+
+            echo "<p> Cliente: $nombre </p>";
+            echo "<p> Correo: $correo</p>";
+            echo "<p> Cantidad: $cantidad_pizzas </p>";
+            echo "<p> Tipo sw pizza $tipo_pizza </p>";
+            echo "<p> Nivel de picante $picante </p>";
+            echo "<p> Fecha $fecha </p>";
+            echo "<p> Color: $color </p>";
+            echo "<p> Tamaño: $tamanio </p>";
+            echo "<p> Instrucciones: $instrucciones </p>";
+            ?>
             
         </div>
         
